@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Calculator.css";
 import Display from "./display";
+import "./Calculator.css";
 
 const Calculator = () => {
   const initialState = {
