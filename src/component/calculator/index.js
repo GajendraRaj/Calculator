@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Calculator.css";
+import Display from "./display";
 
 const Calculator = () => {
   const initialState = {
@@ -17,7 +18,11 @@ const Calculator = () => {
 
   const updateDisplay = () => {};
 
-  return <div></div>;
+  return (
+    <div className="calculator-container">
+      <Display displayValue={state.displayValue} />
+    </div>
+  );
 };
 
 export default Calculator;
