@@ -30,4 +30,8 @@ describe("Keypad", () => {
     wrapper.setProps({ operators: ["+", "-", "*", "/"] });
     expect(wrapper.find(".operators-container").text()).toEqual("+-*/");
   });
+
+  it("should render an instance of the key componenet", () => {
+    expect(wrapper.find("Key").length).toEqual(1);
+  });
 });
