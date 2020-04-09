@@ -2,7 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Key = (props) => {
-  return <div className="key-container" />;
+  return (
+    <div className="key-container">
+      <p className="key-value">{props.keyValue}</p>
+    </div>
+  );
 };
 
 Key.propTypes = {
