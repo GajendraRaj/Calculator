@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import Calculator from "../../component/calculator";
 import Display from "../../component/calculator/display";
+import Keypad from "../../component/calculator/keypad";
 
 describe("Calculator", () => {
   let wrapper;
@@ -16,5 +17,9 @@ describe("Calculator", () => {
 
   it("should render the Display Component", () => {
     expect(wrapper.containsMatchingElement(<Display />)).toEqual(true);
+  });
+
+  it("should render the keypad Component", () => {
+    expect(wrapper.containsMatchingElement(<Keypad />)).toEqual(true);
   });
 });
