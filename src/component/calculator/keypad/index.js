@@ -5,10 +5,14 @@ const Keypad = (props) => {
   const numberKeys = props.numbers.map((number) => (
     <p key={number}>{number}</p>
   ));
+  const operatorKeys = props.operators.map((operator) => (
+    <p key={operator}>{operator}</p>
+  ));
 
   return (
     <div className="keypad-container">
       <div className="numbers-container">{numberKeys}</div>
+      <div className="operators-container">{operatorKeys}</div>
     </div>
   );
 };
