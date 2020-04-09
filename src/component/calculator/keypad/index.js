@@ -5,17 +5,29 @@ import "./index.css";
 
 const Keypad = (props) => {
   const numberKeys = props.numbers.map((number) => (
-    <p key={number}>{number}</p>
+    <Key
+      key={number}
+      keyAction={props.updateDisplay}
+      keyType="number-key"
+      keyValue={number}
+    />
   ));
   const operatorKeys = props.operators.map((operator) => (
-    <p key={operator}>{operator}</p>
+    <Key
+      key={operator}
+      keyAction={props.setOperator}
+      keyType="operator-key"
+      keyValue={operator}
+    />
   ));
 
   return (
     <div className="keypad-container">
       <div className="numbers-container">{numberKeys}</div>
       <div className="operators-container">{operatorKeys}</div>
-      <Key keyAction={props.callOperator} keyType="" keyValue="" />
+      <div className="submit-container">
+        <Key keyAction={props.callOperator} keyType="submit-key" keyValue="=" />
+      </div>
     </div>
   );
 };
