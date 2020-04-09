@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Keypad = (props) => {
-  return <div className="keypad-container"></div>;
+  const numberKeys = props.numbers.map((number) => (
+    <p key={number}>{number}</p>
+  ));
+
+  return (
+    <div className="keypad-container">
+      <div className="numbers-container">{numberKeys}</div>
+    </div>
+  );
 };
 
 Keypad.propTypes = {
